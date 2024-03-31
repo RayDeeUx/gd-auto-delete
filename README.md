@@ -1,2 +1,3 @@
-# gd-auto-delete
-Auto delete.
+# Autodelete
+
+This is where she makes a mod.
