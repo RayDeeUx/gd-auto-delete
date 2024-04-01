@@ -14,8 +14,8 @@ class $modify(lil, LevelInfoLayer) {
 		auto menu = CCMenu::create();
 
 		menu->setID("bingy3.dosave-toggler-menu");
-		menu->setPosition(10, 22.5);
-		menu->setScale(0.7);
+		menu->setPosition(-20, 5);
+		menu->setScale(0.6);
 
 		auto deleteToggledButton = CCMenuItemSpriteExtra::create(
 			ButtonSprite::create("Do save"),
