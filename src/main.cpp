@@ -5,6 +5,8 @@ using namespace geode::prelude;
 #include <Geode/modify/LevelInfoLayer.hpp>
 #include <Geode/binding/GameLevelManager.hpp>
 
+#include <Geode/modify/MenuLayer.hpp>
+
 bool save = false;
 
 class $modify(lil, LevelInfoLayer) {
@@ -14,8 +16,8 @@ class $modify(lil, LevelInfoLayer) {
 		auto menu = CCMenu::create();
 
 		menu->setID("bingy3.dosave-toggler-menu");
-		menu->setPosition(-20, 5);
-		menu->setScale(0.6);
+		menu->setPosition(-62, -15);
+		menu->setScale(0.47);
 
 		auto deleteToggledButton = CCMenuItemSpriteExtra::create(
 			ButtonSprite::create("Do save"),

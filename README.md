@@ -1,3 +1,3 @@
 # Autodelete
 
-This is where she makes a mod.
+auto delete
