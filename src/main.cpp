@@ -1,11 +1,6 @@
-#include <Geode/Geode.hpp>
+#include <Geode/modify/LevelInfoLayer.hpp>
 
 using namespace geode::prelude;
-
-#include <Geode/modify/LevelInfoLayer.hpp>
-#include <Geode/binding/GameLevelManager.hpp>
-
-#include <Geode/modify/MenuLayer.hpp>
 
 bool save = false;
 
@@ -15,7 +10,7 @@ class $modify(lil, LevelInfoLayer) {
 
 		auto menu = CCMenu::create();
 
-		menu->setID("bingy3.dosave-toggler-menu");
+		menu->setID("toggler-menu"_spr);
 		menu->setPosition(-62, -15);
 		menu->setScale(0.47);
 
@@ -25,7 +20,7 @@ class $modify(lil, LevelInfoLayer) {
 			menu_selector(lil::onToggleSaved)
 		);
 
-		deleteToggledButton->setID("bingy3.delete-toggled");
+		deleteToggledButton->setID("delete-toggled"_spr);
 		deleteToggledButton->setPosition(0,0);
 		
 		auto saveToggledButton = CCMenuItemSpriteExtra::create(
@@ -34,7 +29,7 @@ class $modify(lil, LevelInfoLayer) {
 			menu_selector(lil::onToggleSaved)
 		);
 
-		saveToggledButton->setID("bingy3.save-toggled");
+		saveToggledButton->setID("save-toggled"_spr);
 		saveToggledButton->setPosition(0,0);
 
 		menu->addChild(saveToggledButton);
@@ -53,8 +48,8 @@ class $modify(lil, LevelInfoLayer) {
 	}
 
 	void saveToggled() {
-		CCMenuItemSpriteExtra* saveToggledButton = static_cast<CCMenuItemSpriteExtra*>(this->getChildByID("bingy3.dosave-toggler-menu")->getChildByID("bingy3.save-toggled"));
-		CCMenuItemSpriteExtra* deleteToggledButton = static_cast<CCMenuItemSpriteExtra*>(this->getChildByID("bingy3.dosave-toggler-menu")->getChildByID("bingy3.delete-toggled"));
+		CCMenuItemSpriteExtra* saveToggledButton = static_cast<CCMenuItemSpriteExtra*>(this->getChildByID("toggler-menu"_spr)->getChildByID("save-toggled"_spr));
+		CCMenuItemSpriteExtra* deleteToggledButton = static_cast<CCMenuItemSpriteExtra*>(this->getChildByID("toggler-menu"_spr)->getChildByID("delete-toggled"_spr));
 		saveToggledButton->setVisible(save); 
 		deleteToggledButton->setVisible(!save);
 	}

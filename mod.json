@@ -1,7 +1,10 @@
 {
-	"geode": "2.0.0-beta.21",
-	"gd": "2.204",
-	"version": "v1.0.0",
+	"geode": "2.0.0-beta.26",
+	"gd": {
+		"win": "2.204",
+		"android": "2.205"
+	},
+	"version": "v1.1.0",
 	"id": "bingy3.auto_delete",
 	"name": "Auto delete",
 	"developer": "Bingy3",
